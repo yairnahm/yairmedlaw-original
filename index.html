@@ -22,7 +22,15 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#about">אודות</a></li>
-          <li><a href="#areas">תחומי עיסוק</a></li>
+          <li class="has-dropdown">
+            <a href="#areas" class="dropdown-toggle">תחומי עיסוק <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="shgiot-ibchun.html">רשלנות רפואית</a></li>
+              <li><a href="taonot-drakhim.html">תאונות דרכים</a></li>
+              <li><a href="bituach-taonot.html">תביעות ביטוח</a></li>
+              <li><a href="nfilot.html">נזקי גוף כלליים</a></li>
+            </ul>
+          </li>
           <li><a href="#why">למה אני?</a></li>
           <li><a href="#contact">צור קשר</a></li>
         </ul>
@@ -34,7 +42,11 @@
     <div class="mobile-menu" id="mobileMenu">
       <ul>
         <li><a href="#about" class="mobile-link">אודות</a></li>
-        <li><a href="#areas" class="mobile-link">תחומי עיסוק</a></li>
+        <li class="mobile-section-label">תחומי עיסוק</li>
+        <li><a href="shgiot-ibchun.html" class="mobile-link mobile-sub">— רשלנות רפואית</a></li>
+        <li><a href="taonot-drakhim.html" class="mobile-link mobile-sub">— תאונות דרכים</a></li>
+        <li><a href="bituach-taonot.html" class="mobile-link mobile-sub">— תביעות ביטוח</a></li>
+        <li><a href="nfilot.html" class="mobile-link mobile-sub">— נזקי גוף כלליים</a></li>
         <li><a href="#why" class="mobile-link">למה אני?</a></li>
         <li><a href="#contact" class="mobile-link">צור קשר</a></li>
       </ul>
@@ -84,10 +96,7 @@
   <section id="about">
     <div class="container about-grid">
       <div class="about-image">
-        <div class="about-image-placeholder">
-          <span>יאיר נחמיאס</span>
-          <small>עורך דין</small>
-        </div>
+        <img src="yair.jpg" alt="עו&quot;ד יאיר נחמיאס" class="about-photo" />
         <div class="about-badge">15 שנות ניסיון</div>
       </div>
       <div class="about-text">
@@ -222,7 +231,18 @@
             <span class="contact-icon">📍</span>
             <div>
               <strong>כתובת</strong>
-              <span>ריב"ל 4, תל אביב</span>
+              <a href="https://waze.com/ul?q=%D7%A8%D7%99%D7%91%22%D7%9C+4%2C+%D7%AA%D7%9C+%D7%90%D7%91%D7%99%D7%91" target="_blank" rel="noopener" class="waze-link">
+                <svg class="waze-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" aria-label="Waze">
+                  <circle cx="25" cy="22" r="20" fill="#33CCFF"/>
+                  <ellipse cx="25" cy="24" rx="14" ry="13" fill="#ffffff"/>
+                  <circle cx="20" cy="21" r="2.5" fill="#333"/>
+                  <circle cx="30" cy="21" r="2.5" fill="#333"/>
+                  <path d="M19 27 Q25 32 31 27" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+                  <circle cx="34" cy="10" r="4" fill="#FF6B35"/>
+                  <path d="M25 8 L34 10" stroke="#FF6B35" stroke-width="1.5"/>
+                </svg>
+                ריב"ל 4, תל אביב
+              </a>
             </div>
           </div>
           <div class="contact-item">
@@ -233,10 +253,17 @@
             </div>
           </div>
           <div class="contact-item">
+            <span class="contact-icon">🖨</span>
+            <div>
+              <strong>פקס</strong>
+              <span>03-5525311</span>
+            </div>
+          </div>
+          <div class="contact-item">
             <span class="contact-icon">💬</span>
             <div>
               <strong>WhatsApp</strong>
-              <a href="https://wa.me/972035525355" target="_blank" rel="noopener">שלח הודעה בוואטסאפ</a>
+              <a href="https://wa.me/972535525355" target="_blank" rel="noopener">שלח הודעה בוואטסאפ</a>
             </div>
           </div>
           <div class="contact-item">
@@ -244,6 +271,15 @@
             <div>
               <strong>אימייל</strong>
               <a href="mailto:yairmedlaw@gmail.com">yairmedlaw@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-label="Facebook"><path fill="#1877F2" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.027 4.388 11.024 10.125 11.927v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.437C19.612 23.097 24 18.1 24 12.073z"/></svg>
+            </span>
+            <div>
+              <strong>פייסבוק</strong>
+              <a href="https://www.facebook.com/profile.php?id=100066783457816" target="_blank" rel="noopener">עמוד הפייסבוק שלי</a>
             </div>
           </div>
           <div class="contact-item">
@@ -298,12 +334,50 @@
   <!-- FOOTER -->
   <footer id="footer">
     <div class="container footer-inner">
-      <div class="footer-logo">
-        <span class="logo-name">יאיר נחמיאס</span>
-        <span class="logo-title">עורך דין</span>
+      <div class="footer-top">
+        <div class="footer-logo">
+          <span class="logo-name">יאיר נחמיאס</span>
+          <span class="logo-title">עורך דין</span>
+        </div>
+
+        <nav class="footer-nav">
+          <div class="footer-nav-col">
+            <p class="footer-nav-title">ניווט מהיר</p>
+            <ul>
+              <li><a href="#about">אודות</a></li>
+              <li><a href="#areas">תחומי עיסוק</a></li>
+              <li><a href="#why">למה אני?</a></li>
+              <li><a href="#contact">צור קשר</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <p class="footer-nav-title">תחומי עיסוק</p>
+            <ul>
+              <li><a href="shgiot-ibchun.html">רשלנות רפואית</a></li>
+              <li><a href="taonot-drakhim.html">תאונות דרכים</a></li>
+              <li><a href="bituach-taonot.html">תביעות ביטוח</a></li>
+              <li><a href="nfilot.html">נזקי גוף כלליים</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <p class="footer-nav-title">צור קשר</p>
+            <ul>
+              <li><a href="tel:035525355">📞 03-5525355</a></li>
+              <li><a href="https://wa.me/972535525355" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=100066783457816" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" style="vertical-align:middle;margin-left:4px"><path fill="#1877F2" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.027 4.388 11.024 10.125 11.927v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.437C19.612 23.097 24 18.1 24 12.073z"/></svg>
+                פייסבוק
+              </a></li>
+              <li><a href="https://waze.com/ul?q=%D7%A8%D7%99%D7%91%22%D7%9C+4%2C+%D7%AA%D7%9C+%D7%90%D7%91%D7%99%D7%91" target="_blank" rel="noopener">📍 ריב"ל 4, ת"א</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <p class="footer-copy">© 2025 עו"ד יאיר נחמיאס. כל הזכויות שמורות.</p>
-      <p class="footer-disclaimer">האמור באתר זה אינו מהווה ייעוץ משפטי ואינו יוצר יחסי עורך דין–לקוח.</p>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 עו"ד יאיר נחמיאס. כל הזכויות שמורות.</p>
+        <p class="footer-disclaimer">האמור באתר זה אינו מהווה ייעוץ משפטי ואינו יוצר יחסי עורך דין–לקוח.</p>
+      </div>
     </div>
   </footer>
 
