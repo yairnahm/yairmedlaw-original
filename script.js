@@ -1,30 +1,23 @@
 // Header scroll effect
 const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 50);
-});
-
-// Hamburger menu
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-});
-document.querySelectorAll('.mobile-link').forEach(link => {
-  link.addEventListener('click', () => mobileMenu.classList.remove('open'));
-});
+if (header) {
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 50);
+  });
+}
 
 // Contact form
 const form = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  form.classList.add('hidden');
-  formSuccess.classList.remove('hidden');
-});
+if (form && formSuccess) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.classList.add('hidden');
+    formSuccess.classList.remove('hidden');
+  });
+}
 
-// Animate stats on scroll
-const statNums = document.querySelectorAll('.stat-num');
+// Animate elements on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
