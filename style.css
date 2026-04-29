@@ -851,6 +851,31 @@ details.faq-item summary:hover { color: var(--gold); }
   border-top: 1px solid rgba(201,168,76,0.18);
 }
 
+/* ===== CONTACT ROW (phone/fax/whatsapp inline) ===== */
+.contact-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.contact-row .contact-item {
+  flex: 1;
+  min-width: 90px;
+}
+
+/* ===== WHY BOUTIQUE HIGHLIGHT ===== */
+.why-item-boutique {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  border: 1px solid rgba(201,168,76,0.35);
+}
+.why-item-boutique .why-num { color: rgba(201,168,76,0.35); }
+.why-item-boutique h4 { color: var(--white); }
+.why-item-boutique p { color: rgba(255,255,255,0.7); }
+.why-item-boutique p strong { color: var(--gold); }
+.why-item-boutique:hover { background: linear-gradient(135deg, var(--navy-light) 0%, #1a4a8a 100%); border-color: var(--gold); }
+.why-item-boutique:hover .why-num { color: var(--gold-light); }
+
 /* ===== SECTION SUBTITLE ===== */
 .section-sub {
   max-width: 620px;
