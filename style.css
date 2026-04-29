@@ -91,16 +91,19 @@ img { max-width: 100%; display: block; }
   justify-content: space-between;
   height: 72px;
 }
-.logo { display: flex; flex-direction: column; line-height: 1.2; }
-.logo-name { font-size: 1.3rem; font-weight: 700; color: var(--white); }
-.logo-title { font-size: 0.75rem; font-weight: 400; color: var(--gold); letter-spacing: 1px; }
-nav { display: flex; align-items: center; gap: 32px; }
-.nav-links { display: flex; gap: 20px; }
+.logo { display: flex; flex-direction: row; align-items: baseline; gap: 8px; line-height: 1.2; }
+.logo-name { font-size: 1.3rem; font-weight: 700; color: var(--white); white-space: nowrap; }
+.logo-title { font-size: 0.75rem; font-weight: 400; color: var(--gold); letter-spacing: 1px; white-space: nowrap; }
+.logo-link { text-decoration: none; cursor: pointer; }
+.logo-link:hover .logo-name { color: var(--gold-light); }
+nav { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 18px; }
 .nav-links a {
   color: rgba(255,255,255,0.85);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   position: relative;
+  white-space: nowrap;
   transition: color var(--transition);
 }
 .nav-links a::after {
@@ -838,4 +841,12 @@ details.faq-item summary:hover { color: var(--gold); }
   color: #4a5568;
   line-height: 1.8;
   margin: 16px 0 0;
+}
+
+/* ===== ARTICLE BOTTOM NAV ===== */
+.article-back-bottom {
+  text-align: center;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(201,168,76,0.18);
 }
