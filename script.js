@@ -33,3 +33,15 @@ document.querySelectorAll('.stat-item, .area-card, .why-item').forEach(el => {
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   observer.observe(el);
 });
+
+// WhatsApp Floating Action Button
+(function() {
+  const fab = document.createElement('a');
+  fab.href = 'https://wa.me/972535525311';
+  fab.target = '_blank';
+  fab.rel = 'noopener noreferrer';
+  fab.className = 'whatsapp-fab';
+  fab.setAttribute('aria-label', 'שלח הודעת WhatsApp');
+  fab.innerHTML = '💬';
+  document.body.appendChild(fab);
+})();

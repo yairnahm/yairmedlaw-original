@@ -1144,3 +1144,95 @@ details.faq-item summary:hover { color: var(--gold); }
   #cases { padding: 72px 0; }
   .thanks-header h3 { font-size: 1.4rem; }
 }
+
+/* ===== AUTHOR BOX (article pages) ===== */
+.author-box {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--gray-light);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 48px 0 0;
+  border-right: 4px solid var(--teal);
+}
+.author-info { flex: 1; }
+.author-name {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.author-role {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--gray-text);
+  margin-bottom: 10px;
+}
+.author-bio {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ===== ARTICLE FAQ ===== */
+.article-faq {
+  margin: 48px 0 0;
+}
+.article-faq > h2 {
+  margin-bottom: 20px;
+}
+
+/* ===== WHATSAPP FAB ===== */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.55rem;
+  line-height: 1;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+  z-index: 9999;
+  transition: transform var(--transition), box-shadow var(--transition);
+  text-decoration: none;
+}
+.whatsapp-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px rgba(37,211,102,0.55);
+}
+@media (max-width: 768px) {
+  .whatsapp-fab {
+    bottom: 20px;
+    left: 20px;
+    width: 52px;
+    height: 52px;
+    font-size: 1.35rem;
+  }
+}
+
+/* ===== AREAS GRID — MEDICAL MALPRACTICE 2×2 ===== */
+.areas-grid-med {
+  grid-template-columns: repeat(2, 1fr);
+}
+.areas-grid-med .area-card .knowledge-cta {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--teal);
+  transition: color var(--transition);
+}
+.areas-grid-med .area-card .knowledge-cta:hover {
+  color: var(--teal-light);
+}
+@media (max-width: 768px) {
+  .areas-grid-med { grid-template-columns: 1fr; }
+}
